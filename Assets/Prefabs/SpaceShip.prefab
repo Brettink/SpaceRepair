@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6456931769686246182}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8237302744426548389
 SpriteRenderer:
@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59e346b783d4f064eb833f3141c47471, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8ea46cf50921cb4a88c94516deaf7f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,7 +108,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6456931769686246182}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5495977809041468697
 SpriteRenderer:
@@ -147,7 +147,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59e346b783d4f064eb833f3141c47471, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8ea46cf50921cb4a88c94516deaf7f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,11 +184,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2820222739219384832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.4, y: 0, z: -1}
+  m_LocalPosition: {x: -4.4, y: 0, z: -0.5}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 6456931769686246182}
-  m_RootOrder: 7
+  m_Father: {fileID: 6456931768756242245}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9083046233266783527
 SpriteRenderer:
@@ -854,8 +854,8 @@ PolygonCollider2D:
       - {x: 0.0035979748, y: 0.8250294}
       - {x: 0.7583658, y: 0.8001646}
       - {x: 0.77017415, y: 0.3128729}
-      - {x: 0.68549335, y: -0.2407252}
-      - {x: 0.63, y: -0.7}
+      - {x: 0.77650833, y: -0.22772312}
+      - {x: 0.7340166, y: -0.7260043}
       - {x: 1.1, y: -1.0699999}
       - {x: 1.1899999, y: -1.0799999}
       - {x: 1.53, y: -0.91999996}
@@ -1395,6 +1395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6456931768412379955}
   - component: {fileID: 6456931768412379956}
+  - component: {fileID: 2868734272645252809}
   m_Layer: 0
   m_Name: StarBoard Wall
   m_TagString: Untagged
@@ -1464,6 +1465,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2868734272645252809
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456931768412379957}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6456931768429216492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6456931768567045617}
   - component: {fileID: 6456931768567045616}
+  - component: {fileID: 206222507985084765}
   m_Layer: 0
   m_Name: Bridge Front Wall
   m_TagString: Untagged
@@ -1694,6 +1722,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &206222507985084765
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456931768567045618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6456931768597090231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1858,7 @@ Transform:
   - {fileID: 2253098582347325426}
   - {fileID: 2168069065541609354}
   - {fileID: 4223288179903112144}
+  - {fileID: 8226046287126964709}
   m_Father: {fileID: 6456931769686246182}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1817,6 +1872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6456931768909142856}
   - component: {fileID: 6456931768909142857}
+  - component: {fileID: 4213037449436405666}
   m_Layer: 0
   m_Name: Booster Wall
   m_TagString: Untagged
@@ -1886,6 +1942,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4213037449436405666
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456931768909142858}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6456931768967607554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,6 +2532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6456931769351268191}
   - component: {fileID: 6456931769351268190}
+  - component: {fileID: 4250852688606608515}
   m_Layer: 0
   m_Name: 'Bridge Right Wall '
   m_TagString: Untagged
@@ -2519,6 +2602,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4250852688606608515
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456931769351268160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6456931769488523629
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,9 +5309,8 @@ Transform:
   - {fileID: 6456931768068186815}
   - {fileID: 6456931769176711577}
   - {fileID: 6456931769488523628}
-  - {fileID: 1170938563717562437}
   - {fileID: 5569609693824671190}
-  - {fileID: 8226046287126964709}
+  - {fileID: 1170938563717562437}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5216,6 +5324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6456931769784456424}
   - component: {fileID: 6456931769784456425}
+  - component: {fileID: 7815205261300991293}
   m_Layer: 0
   m_Name: Bridge Left Wall
   m_TagString: Untagged
@@ -5285,6 +5394,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7815205261300991293
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456931769784456426}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6456931769816623040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5295,6 +5430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6456931769816623070}
   - component: {fileID: 6456931769816623071}
+  - component: {fileID: 2782751750479770741}
   m_Layer: 0
   m_Name: Port Wall
   m_TagString: Untagged
@@ -5364,3 +5500,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2782751750479770741
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456931769816623040}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
