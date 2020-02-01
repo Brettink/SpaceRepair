@@ -1,9 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: af0447b093576b9488a229770c925ee6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
+=======
+guid: 20b27d5a8346a204085eaaa0e8c2d99d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bridge_0
+    21300002: bridge_1
+  externalObjects: {}
+  serializedVersion: 9
+>>>>>>> b175a52c23a338d8acbc61f33861d10efb1f4dd4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -23,7 +33,10 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+<<<<<<< HEAD
   vTOnly: 0
+=======
+>>>>>>> b175a52c23a338d8acbc61f33861d10efb1f4dd4
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -41,7 +54,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> b175a52c23a338d8acbc61f33861d10efb1f4dd4
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +75,14 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+<<<<<<< HEAD
   ignorePngGamma: 0
   platformSettings:
   - serializedVersion: 3
+=======
+  platformSettings:
+  - serializedVersion: 2
+>>>>>>> b175a52c23a338d8acbc61f33861d10efb1f4dd4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -71,6 +93,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
@@ -80,11 +103,85 @@ TextureImporter:
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
+=======
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bridge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843b13aad17d05c44b924c2d23872b7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca31630ae9f55814a88f8e5eb9818eda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d8259c94e178906478f2d97dd07d39ca
+>>>>>>> b175a52c23a338d8acbc61f33861d10efb1f4dd4
     vertices: []
     indices: 
     edges: []
     weights: []
+<<<<<<< HEAD
     secondaryTextures: []
+=======
+>>>>>>> b175a52c23a338d8acbc61f33861d10efb1f4dd4
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
