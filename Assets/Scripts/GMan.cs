@@ -20,9 +20,10 @@ public class GMan : MonoBehaviour
     void Update()
     {
         float canSpawn = Random.value * 10000;
-        if (canSpawn < 2000)
+        if (canSpawn < 200)
         {
-            for (int i = 0; i < (difficulty * Mathf.Pow(Mathf.PI, difficulty)); i++)
+            print((difficulty * Mathf.Log(difficulty)));
+            for (int i = 0; i < (difficulty * difficulty); i++)
             {
                 int L_R = Random.Range(-halfW, halfW);
                 GameObject aster = Instantiate(_aster_imgs_pref, Vector2.zero, Quaternion.identity);

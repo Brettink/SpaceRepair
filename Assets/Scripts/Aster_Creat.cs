@@ -5,7 +5,7 @@ using UnityEngine;
 public class Aster_Creat : MonoBehaviour
 {
     Vector2 dir = Vector2.down * 10;
-    public float max_deviation = 10f;
+    public float max_deviation = 20f;
     public Rigidbody2D bod;
     // Start is called before the first frame update
     void Start()
