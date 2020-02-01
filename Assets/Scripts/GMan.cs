@@ -10,11 +10,12 @@ public class GMan : MonoBehaviour
     public static Rigidbody2D charBod;
     public static int score = 0;
     public static float damage = 0f;
-    public static float difficulty = 1.25f;
+    public static float difficulty = 1.75f;
     public const float VOOMIN = .35f;
     public int halfW = 50;
     public int backDist = 50;
     public Camera main;
+    public Controller con;
 
     public class stats
     {
@@ -53,6 +54,7 @@ public class GMan : MonoBehaviour
                         Camera.main.transform.parent = Character.transform;
                         isChange = true;
                         viewMode = 1;
+                        con.body.constraints = RigidbodyConstraints2D.FreezePositionX + RigidbodyConstraints2D.FreezePositionY;
                         charBod.isKinematic = false;
                         break;
                     }
