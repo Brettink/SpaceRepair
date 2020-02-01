@@ -25,7 +25,7 @@ public class GMan : MonoBehaviour
     }
     public static stats gameStats = new stats();
     public static int viewMode = 0;
-    public bool isChange = false;
+    public static bool isChange = false;
     public Transform camTrans;
     Vector3 posE = Vector3.back * 10;
 
@@ -37,7 +37,6 @@ public class GMan : MonoBehaviour
         shipStatus.Add("weap", false);
         shipStatus.Add("hp", false);
         shipStatus.Add("O2", false);
-        print(difficulty * Mathf.Pow(Mathf.PI, difficulty));
         camTrans = Camera.main.transform;
     }
 
