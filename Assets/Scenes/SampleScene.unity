@@ -5029,6 +5029,11 @@ PrefabInstance:
       propertyPath: Character
       value: 
       objectReference: {fileID: 28574630}
+    - target: {fileID: 5605483133647494112, guid: 09ab8b1f8266b624f95ede551c40e549,
+        type: 3}
+      propertyPath: main
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ab8b1f8266b624f95ede551c40e549, type: 3}
 --- !u!1 &519420028
@@ -5114,6 +5119,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &684410886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6456931769686246183, guid: 7db6d1c9df695cc40abba97c12380b28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1968689423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &684410887
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684410886}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDrag: 1.5
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &684410888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684410886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376231c2d4874ab43931fa785eb108cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 684410887}
 --- !u!1001 &1431730212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5212,6 +5257,17 @@ PrefabInstance:
       value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 2780296560518274697, guid: 7db6d1c9df695cc40abba97c12380b28,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5495977809041468697, guid: 7db6d1c9df695cc40abba97c12380b28,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f8ea46cf50921cb4a88c94516deaf7f1,
+        type: 3}
+    - target: {fileID: 5495977809041468697, guid: 7db6d1c9df695cc40abba97c12380b28,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -6595,6 +6651,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DasSpacePit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237302744426548389, guid: 7db6d1c9df695cc40abba97c12380b28,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f8ea46cf50921cb4a88c94516deaf7f1,
+        type: 3}
+    - target: {fileID: 8237302744426548389, guid: 7db6d1c9df695cc40abba97c12380b28,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7db6d1c9df695cc40abba97c12380b28, type: 3}
