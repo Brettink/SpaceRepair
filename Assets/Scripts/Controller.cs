@@ -12,27 +12,15 @@ public class Controller : MonoBehaviour
         
     }
 
-    Vector2 getKeyAxis(KeyCode e, Vector2 axis)
-    {
-        if (Input.GetKey(e))
-        {
-            return axis*3;
-        }
-        else
-        {
-            return Vector2.zero;
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
         {
             float mx = Input.GetAxis("Horizontal");
             float my = Input.GetAxis("Vertical");
-            Vector2 move_more = new Vector2(mx, my);
+            Vector2 move_more = new Vector2(mx, my) * GMan.gameStats.engine;
 
-            body.AddForce(move_more/10f, ForceMode2D.Impulse);
+            body.AddForce(move_more);
         }
     }
 }

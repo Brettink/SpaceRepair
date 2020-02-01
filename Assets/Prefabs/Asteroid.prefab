@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ca7f8eed83b0343a996139fb7912e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_deviation: 12
+  max_deviation: 7
   bod: {fileID: 380983893186738394}
 --- !u!58 &785079400662568663
 CircleCollider2D:
