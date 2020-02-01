@@ -4,26 +4,22 @@ using UnityEngine;
 
 public class Aster_Creat : MonoBehaviour
 {
-    public PolygonCollider2D pl;
-    public float max_deviation = 2f;
+    Vector2 dir = Vector2.down * 10;
+    public float max_deviation = 10f;
+    public Rigidbody2D bod;
     // Start is called before the first frame update
     void Start()
     {
-        int _num_points = Random.Range(5, 15);
-        Vector2[] points = new Vector2[_num_points];
-        for (int i = 0; i < _num_points; i++)
-        {
-            float x = Random.Range(-max_deviation, max_deviation)/10;
-            float y = Random.Range(-max_deviation, max_deviation)/10;
-            print(x + " " + y);
-            points[i] = new Vector2(x, y);
-        }
-        pl.points = points;
+        dir.x = Random.Range(-max_deviation, max_deviation);
+        bod.velocity = dir;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.y < -30)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

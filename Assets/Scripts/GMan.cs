@@ -13,17 +13,22 @@ public class GMan : MonoBehaviour
     public int backDist = 50;
     void Start()
     {
-        
+        print(difficulty * Mathf.Pow(Mathf.PI, difficulty));
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < (difficulty * Mathf.Pow(Mathf.PI, difficulty)); i++){
-            int L_R = Random.Range(-halfW, halfW);
-            GameObject aster = Instantiate(_aster_imgs_pref, Vector2.zero, Quaternion.identity);
-            Vector2 pos = new Vector2(L_R, backDist);
-            aster.transform.position = pos;
+        float canSpawn = Random.value * 10000;
+        if (canSpawn < 2000)
+        {
+            for (int i = 0; i < (difficulty * Mathf.Pow(Mathf.PI, difficulty)); i++)
+            {
+                int L_R = Random.Range(-halfW, halfW);
+                GameObject aster = Instantiate(_aster_imgs_pref, Vector2.zero, Quaternion.identity);
+                Vector2 pos = new Vector2(L_R, backDist);
+                aster.transform.position = pos;
+            }
         }
     }
 }
