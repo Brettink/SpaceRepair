@@ -54,7 +54,8 @@ public class GMan : MonoBehaviour
                         Camera.main.transform.parent = Character.transform;
                         isChange = true;
                         viewMode = 1;
-                        con.body.constraints = RigidbodyConstraints2D.FreezePositionX + RigidbodyConstraints2D.FreezePositionY;
+                        con.body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY |
+                                                RigidbodyConstraints2D.FreezeRotation;
                         charBod.isKinematic = false;
                         break;
                     }
@@ -63,6 +64,7 @@ public class GMan : MonoBehaviour
                         Camera.main.transform.parent = null;
                         isChange = true;
                         viewMode = 0;
+                        con.body.constraints = RigidbodyConstraints2D.FreezeRotation;
                         charBod.isKinematic = true;
                         break;
                     }
