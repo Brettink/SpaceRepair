@@ -10,7 +10,7 @@ public class Controller : MonoBehaviour
     private Rigidbody2D bodyToMove;
     void Start()
     {
-        
+        GMan.charBod = bodyChar;
     }
 
     // Update is called once per frame

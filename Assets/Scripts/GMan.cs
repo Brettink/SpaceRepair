@@ -7,6 +7,7 @@ public class GMan : MonoBehaviour
     // Start is called before the first frame update
     public GameObject _aster_imgs_pref;
     public GameObject Character;
+    public static Rigidbody2D charBod;
     public static int score = 0;
     public static float damage = 0f;
     public static float difficulty = 1.25f;
@@ -52,6 +53,7 @@ public class GMan : MonoBehaviour
                         Camera.main.transform.parent = Character.transform;
                         isChange = true;
                         viewMode = 1;
+                        charBod.isKinematic = false;
                         break;
                     }
                 case 1:
@@ -59,6 +61,7 @@ public class GMan : MonoBehaviour
                         Camera.main.transform.parent = null;
                         isChange = true;
                         viewMode = 0;
+                        charBod.isKinematic = true;
                         break;
                     }
             }
