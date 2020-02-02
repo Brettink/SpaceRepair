@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 687253005767440587}
   m_Layer: 0
   m_Name: Walls Container
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 687253006493294833}
   m_Layer: 8
   m_Name: DasSpacePit
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1032,6 +1032,12 @@ MonoBehaviour:
   pewGo: {fileID: 4932942349988684105, guid: 5443eec16af153d4e87d12847c919fde, type: 3}
   pewL: {fileID: 5931560227586740836}
   pewR: {fileID: 2699786310047116264}
+  shipOn: {fileID: 21300000, guid: db8619d1eb3f5d5429118b4af20abef6, type: 3}
+  shipOff: {fileID: 21300000, guid: 7d446871d1a81684fbc2376637ba9ba7, type: 3}
+  shipBooster:
+  - {fileID: 2616791395729307546}
+  - {fileID: 7418890595488369469}
+  isBurn: 0
   lastTime: 0
 --- !u!1 &687253006578055968
 GameObject:
@@ -4342,7 +4348,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db8619d1eb3f5d5429118b4af20abef6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d446871d1a81684fbc2376637ba9ba7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4703,7 +4709,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db8619d1eb3f5d5429118b4af20abef6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d446871d1a81684fbc2376637ba9ba7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

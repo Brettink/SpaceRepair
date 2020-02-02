@@ -10,6 +10,18 @@ public class Broke : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.gameObject.name.Contains("Ast"))
+        {
+            if (collision.gameObject.transform.parent.tag.Equals("Player"))
+            {
+                GMan.score += 5;
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

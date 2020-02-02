@@ -39,6 +39,10 @@ public class Aster_Creat : MonoBehaviour
                 rd.GetComponent<Rigidbody2D>().velocity = DegToVec2(angle)*.025f;
                 int rdIn = Random.Range(4, startEnd);
                 rd.sprite = GMan.asters[rdIn];
+                if (collision.gameObject.tag == "Player")
+                {
+                    GMan.damage += 1;
+                }
             }
             Destroy(this.gameObject);
         }

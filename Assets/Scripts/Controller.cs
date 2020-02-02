@@ -20,12 +20,25 @@ public class Controller : MonoBehaviour
         GMan.charBod = bodyChar;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(collision.collider.gameObject.name);
+        if (collision.collider.gameObject.tag.Equals("Fix"))
+        {
+            print("Got here");
+            if (!GMan.shipStatus[collision.collider.gameObject.name])
+            {
+                GMan.showMini(collision.collider.gameObject.name);
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Time.realtimeSinceStartup - lastTime > .4f)
+        if (Time.realtimeSinceStartup - lastTime > 1f)
         {
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") && GMan.viewMode == 0)
             {
                 lastTime = Time.realtimeSinceStartup;
                 Instantiate(pewGo, pewL);
@@ -46,15 +59,16 @@ public class Controller : MonoBehaviour
                 Vector2 move_more = new Vector2(mx, my) * GMan.gameStats.engine;
 
                 bodyToMove = (GMan.viewMode == 0) ? body : bodyChar;
-                bodyToMove.AddForce(move_more * ((GMan.viewMode == 1) ? .5f : 1));
+                bodyToMove.AddForce(move_more * ((GMan.viewMode == 1) ? .5f : (GMan.shipStatus["engine"])?1:0));
                 if (GMan.viewMode == 1)
                 {
                     bodyToMove.velocity = Vector2.ClampMagnitude(bodyToMove.velocity, .5f);
+
                 }
             }
             else
             {
-                if (isBurn)
+                if (isBurn && GMan.shipStatus["engine"])
                 {
                     shipBooster[0].sprite = shipOff;
                     shipBooster[1].sprite = shipOff;

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GMan : MonoBehaviour
 {
@@ -8,8 +10,59 @@ public class GMan : MonoBehaviour
     public GameObject _aster_imgs_pref;
     public GameObject Character;
     public static Rigidbody2D charBod;
-    public static int score = 0;
-    public static float damage = 0f;
+    public static GMan gMan;
+    public static int sideV = 0;
+    public static int scoreV = 0;
+    public Image oxy;
+    float timeOxy = 0f;
+    public static List<int> rGames = new List<int>();
+    public static int score
+    {
+        get
+        {
+            return scoreV;
+        }
+        set
+        {
+            scoreV = value;
+            gMan.scr.text = "" + scoreV;
+        }
+    }
+    public static float damageV = 0f;
+    //public 
+    public static float damage
+    {
+        get
+        {
+            return damageV;
+        }
+        set
+        {
+            damageV = value;
+            if (damageV > 99)
+            {
+                Application.Quit();
+            }
+            gMan.dmg.text = damageV + "%";
+                sideV = 0;
+                rGames.Add(Random.Range(0, 3));
+                int fix = Random.Range(0, 5);
+            string name = "";
+            if (fix == 0 && shipStatus["O2"])
+            {
+                gMan.timeOxy = Time.realtimeSinceStartup;
+            }
+            switch (fix)
+            {
+                case 0: gMan.o2R.sprite = gMan.o2[1]; name = "O2"; break;
+                case 1: gMan.navR.sprite = gMan.nav[1]; name = "vs"; break;
+                case 2: gMan.radR.sprite = gMan.rad[1]; name = "rad"; break;
+                case 3: gMan.gunR.sprite = gMan.gun[1]; name = "weap"; break;
+                case 4: gMan.engR.sprite = gMan.eng[1]; name = "engine"; break;
+            }
+            shipStatus[name] = false;
+        }
+    }
     public static float difficulty = 1.25f;
     public const float VOOMIN = .35f;
     public int halfW = 50;
@@ -17,7 +70,29 @@ public class GMan : MonoBehaviour
     public Camera main;
     public Controller con;
     public static Sprite[] asters;
-    public static bool curMiniWin = false;
+    public static bool curWinV = false;
+    public static bool curMiniWin
+    {
+        get
+        {
+            return curWinV;
+        }
+        set
+        {
+            if (value)
+            {
+                shipStatus[gMan.fixWhat] = true;
+                damage -= 20f;
+            }
+        }
+    }
+    public Text dmg, scr;
+
+    public Sprite[] o2, nav, rad, gun, eng;
+    public SpriteRenderer o2R, navR, radR, gunR, engR;
+    public GameObject[] miniGames;
+    public GameObject miniShow;
+    public string fixWhat = "";
 
     public class stats
     {
@@ -35,23 +110,44 @@ public class GMan : MonoBehaviour
 
     public static Dictionary<string, bool> shipStatus = new Dictionary<string, bool>();
 
+
+    public static void showMini(string name)
+    {
+        gMan.miniGames[rGames[0]].SetActive(true);
+        rGames.Remove(0);
+        curMiniWin = false;
+        gMan.fixWhat = name;
+    }
     private void Awake()
     {
+        gMan = this;
+        shipStatus.Add("engine", true);
+        shipStatus.Add("vs", true);
+        shipStatus.Add("weap", true);
+        shipStatus.Add("rad", true);
+        shipStatus.Add("O2", true);
+        camTrans = Camera.main.transform;
         asters = Resources.LoadAll<Sprite>("astroid") as Sprite[];
     }
-    void Start()
-    {
-        shipStatus.Add("engine", false);
-        shipStatus.Add("vs", false);
-        shipStatus.Add("weap", false);
-        shipStatus.Add("hp", false);
-        shipStatus.Add("O2", false);
-        camTrans = Camera.main.transform;
-    }
+
 
     // Update is called once per frame
     void Update()
     {
+        if (!shipStatus["O2"])
+        {
+            float alpha = oxy.color.a;
+            if (Time.realtimeSinceStartup - timeOxy > 20f)
+            {
+                shipStatus["O2"] = true;
+                timeOxy = 0f;
+                Application.Quit();
+            } else
+            {
+                alpha = (Time.realtimeSinceStartup - timeOxy) / 20f;
+            }
+            oxy.color = new Color(oxy.color.r, oxy.color.g, oxy.color.b, alpha);
+        }
         if (Input.GetKeyUp(KeyCode.E) && ! isChange)
         {
             switch (viewMode)
