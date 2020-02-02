@@ -10,12 +10,13 @@ public class GMan : MonoBehaviour
     public static Rigidbody2D charBod;
     public static int score = 0;
     public static float damage = 0f;
-    public static float difficulty = 1.75f;
+    public static float difficulty = 1.25f;
     public const float VOOMIN = .35f;
     public int halfW = 50;
     public int backDist = 50;
     public Camera main;
     public Controller con;
+    public static Sprite[] asters;
 
     public class stats
     {
@@ -32,6 +33,11 @@ public class GMan : MonoBehaviour
     Vector3 posE = Vector3.back * 10;
 
     public static Dictionary<string, bool> shipStatus = new Dictionary<string, bool>();
+
+    private void Awake()
+    {
+        asters = Resources.LoadAll<Sprite>("astroid") as Sprite[];
+    }
     void Start()
     {
         shipStatus.Add("engine", false);

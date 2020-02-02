@@ -35,7 +35,11 @@ public class Controller : MonoBehaviour
             Vector2 move_more = new Vector2(mx, my) * GMan.gameStats.engine;
 
             bodyToMove = (GMan.viewMode == 0) ? body : bodyChar;
-            bodyToMove.AddForce(move_more / ((bodyToMove==bodyChar)?5f:1f));
+            bodyToMove.AddForce(move_more * ((GMan.viewMode == 1)?.5f:1));
+            if (GMan.viewMode == 1)
+            {
+                bodyToMove.velocity = Vector2.ClampMagnitude(bodyToMove.velocity, .5f);
+            }
         }
     }
 

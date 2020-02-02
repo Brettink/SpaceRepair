@@ -10,6 +10,10 @@ public class Aster_Creat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int rInt = (int)Random.Range(0, 3);
+        float size = Random.Range(.25f, .75f);
+        transform.localScale = Vector2.one * size;
+        GetComponent<SpriteRenderer>().sprite = GMan.asters[rInt];
         dir.x = Random.Range(-max_deviation, max_deviation);
         bod.velocity = dir;
     }
