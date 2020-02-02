@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_deviation: 7
   bod: {fileID: 380983893186738394}
+  BrokenPrefab: {fileID: 6237564873727076794, guid: 6759f154c80173b4db91c685f17c276d,
+    type: 3}
 --- !u!58 &785079400662568663
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,7 +133,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0

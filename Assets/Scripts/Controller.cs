@@ -10,6 +10,9 @@ public class Controller : MonoBehaviour
     private Rigidbody2D bodyToMove;
     public GameObject pewGo;
     public Transform pewL, pewR;
+    public Sprite shipOn, shipOff;
+    public SpriteRenderer[] shipBooster;
+    public bool isBurn = false;
     public float lastTime;
     void Start()
     {
@@ -32,13 +35,31 @@ public class Controller : MonoBehaviour
         if (!GMan.isChange){
             float mx = Input.GetAxis("Horizontal");
             float my = Input.GetAxis("Vertical");
-            Vector2 move_more = new Vector2(mx, my) * GMan.gameStats.engine;
-
-            bodyToMove = (GMan.viewMode == 0) ? body : bodyChar;
-            bodyToMove.AddForce(move_more * ((GMan.viewMode == 1)?.5f:1));
-            if (GMan.viewMode == 1)
+            if (mx != 0 || my != 0)
             {
-                bodyToMove.velocity = Vector2.ClampMagnitude(bodyToMove.velocity, .5f);
+                if (!isBurn)
+                {
+                    shipBooster[0].sprite = shipOn;
+                    shipBooster[1].sprite = shipOn;
+                    isBurn = true;
+                }
+                Vector2 move_more = new Vector2(mx, my) * GMan.gameStats.engine;
+
+                bodyToMove = (GMan.viewMode == 0) ? body : bodyChar;
+                bodyToMove.AddForce(move_more * ((GMan.viewMode == 1) ? .5f : 1));
+                if (GMan.viewMode == 1)
+                {
+                    bodyToMove.velocity = Vector2.ClampMagnitude(bodyToMove.velocity, .5f);
+                }
+            }
+            else
+            {
+                if (isBurn)
+                {
+                    shipBooster[0].sprite = shipOff;
+                    shipBooster[1].sprite = shipOff;
+                    isBurn = false;
+                }
             }
         }
     }
