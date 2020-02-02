@@ -17,6 +17,7 @@ public class GMan : MonoBehaviour
     public Camera main;
     public Controller con;
     public static Sprite[] asters;
+    public static bool curMiniWin = false;
 
     public class stats
     {

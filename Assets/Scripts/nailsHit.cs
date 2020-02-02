@@ -11,11 +11,14 @@ public class nailsHit : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
-        transform.parent = null;
-        transform.position.Set(0, -400, 0);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            hit = true;
+            MG1.numHit += 1;
+            print(MG1.numHit);
+        }
     }
 
     // Update is called once per frame
