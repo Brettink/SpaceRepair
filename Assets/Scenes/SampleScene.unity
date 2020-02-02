@@ -5965,6 +5965,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276421740}
   m_CullTransparentMesh: 0
+--- !u!1 &277019501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 687253006622888852, guid: e27040a5b3b46f94db9ef3db16824582,
+    type: 3}
+  m_PrefabInstance: {fileID: 687253006882793721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &277019502
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277019501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 1.67}
+    newSize: {x: 5.12, y: 1.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.93, y: -0.78499997}
+      - {x: -0.78999996, y: -0.635}
+      - {x: -0.39999998, y: -0.59499997}
+      - {x: 0.72999996, y: -0.585}
+      - {x: 0.77, y: -0.625}
+      - {x: 1.14, y: -0.73499995}
+      - {x: 1.5999999, y: -0.765}
+      - {x: 1.8499999, y: -0.73499995}
+      - {x: 2.02, y: -0.66499996}
+      - {x: 2.28, y: -0.685}
+      - {x: 2.36, y: -0.625}
+      - {x: 2.3999999, y: -0.575}
+      - {x: 2.3999999, y: -0.355}
+      - {x: 2.34, y: -0.295}
+      - {x: 2.36, y: 0.024999999}
+      - {x: 2.28, y: 0.295}
+      - {x: 2.02, y: 0.375}
+      - {x: 1.9, y: 0.445}
+      - {x: 1.8399999, y: 0.72499996}
+      - {x: 1.77, y: 0.78499997}
+      - {x: 1.12, y: 0.78499997}
+      - {x: 1.0799999, y: 0.695}
+      - {x: 0.79999995, y: 0.635}
+      - {x: -0.32999998, y: 0.625}
+      - {x: -0.35999998, y: 0.655}
+      - {x: -0.84, y: 0.775}
+      - {x: -1.24, y: 0.775}
+      - {x: -1.55, y: 0.755}
+      - {x: -1.5999999, y: 0.73499995}
+      - {x: -1.67, y: 0.53499997}
+      - {x: -1.6999999, y: 0.435}
+      - {x: -1.78, y: 0.585}
+      - {x: -1.8399999, y: 0.645}
+      - {x: -1.92, y: 0.695}
+      - {x: -1.9699999, y: 0.675}
+      - {x: -1.9599999, y: 0.635}
+      - {x: -2.1399999, y: 0.555}
+      - {x: -2.27, y: 0.445}
+      - {x: -2.27, y: 0.385}
+      - {x: -2.11, y: 0.325}
+      - {x: -2.1699998, y: 0.255}
+      - {x: -2.2, y: 0.044999998}
+      - {x: -2.19, y: -0.36499998}
+      - {x: -2.24, y: -0.435}
+      - {x: -2.24, y: -0.685}
+      - {x: -2.22, y: -0.72499996}
+      - {x: -2.07, y: -0.78499997}
+      - {x: -1.81, y: -0.78499997}
+      - {x: -1.76, y: -0.755}
+      - {x: -1.66, y: -0.775}
+      - {x: -1.39, y: -0.78499997}
+    - - {x: -1.78, y: -0.355}
+      - {x: -1.78, y: -0.21499999}
+      - {x: -1.77, y: -0.205}
+      - {x: -1.76, y: -0.13499999}
+      - {x: -1.77, y: -0.13499999}
+      - {x: -1.78, y: -0.195}
+      - {x: -1.78, y: -0.345}
+      - {x: -1.77, y: -0.355}
+      - {x: -1.76, y: -0.375}
+      - {x: -1.76, y: -0.36499998}
+    - - {x: 1.93, y: -0.285}
+      - {x: 1.9399999, y: -0.275}
+      - {x: 1.9399999, y: -0.16499999}
+      - {x: 1.9399999, y: -0.185}
+      - {x: 1.9499999, y: -0.295}
+      - {x: 1.92, y: -0.325}
+      - {x: 1.93, y: -0.325}
 --- !u!212 &277019503 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 687253006622888854, guid: e27040a5b3b46f94db9ef3db16824582,
@@ -10614,12 +10713,12 @@ PrefabInstance:
     - target: {fileID: 687253005832245911, guid: e27040a5b3b46f94db9ef3db16824582,
         type: 3}
       propertyPath: m_TagString
-      value: Fix
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 687253006437528110, guid: e27040a5b3b46f94db9ef3db16824582,
         type: 3}
       propertyPath: m_Name
-      value: nav
+      value: vs
       objectReference: {fileID: 0}
     - target: {fileID: 687253006437528110, guid: e27040a5b3b46f94db9ef3db16824582,
         type: 3}
@@ -10630,6 +10729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DasSpacePit
+      objectReference: {fileID: 0}
+    - target: {fileID: 687253006622888841, guid: e27040a5b3b46f94db9ef3db16824582,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 687253006622888852, guid: e27040a5b3b46f94db9ef3db16824582,
         type: 3}
@@ -10664,7 +10768,7 @@ PrefabInstance:
     - target: {fileID: 1980548886117330109, guid: e27040a5b3b46f94db9ef3db16824582,
         type: 3}
       propertyPath: m_Name
-      value: nav
+      value: rad
       objectReference: {fileID: 0}
     - target: {fileID: 1980548886117330109, guid: e27040a5b3b46f94db9ef3db16824582,
         type: 3}

@@ -51,6 +51,9 @@ public class GMan : MonoBehaviour
             if (fix == 0 && shipStatus["O2"])
             {
                 gMan.timeOxy = Time.realtimeSinceStartup;
+            } else
+            {
+                gMan.timeOxy = 0;
             }
             switch (fix)
             {
@@ -63,6 +66,7 @@ public class GMan : MonoBehaviour
             shipStatus[name] = false;
         }
     }
+    public GameObject curGame;
     public static float difficulty = 1.25f;
     public const float VOOMIN = .35f;
     public int halfW = 50;
@@ -81,8 +85,28 @@ public class GMan : MonoBehaviour
         {
             if (value)
             {
+                gMan.miniShow.SetActive(false);
+                gMan.curGame.SetActive(false);
                 shipStatus[gMan.fixWhat] = true;
-                damage -= 20f;
+                int strGame = 0;
+                switch (gMan.fixWhat)
+                {
+                    case "O2": strGame = 0; break;
+                    case "vs": strGame = 1; break;
+                    case "rad": strGame = 2; break;
+                    case "weap": strGame = 3; break;
+                    case "engine": strGame = 4; break;
+                }
+                switch (strGame)
+                {
+                    case 0: gMan.o2R.sprite = gMan.o2[0]; break;
+                    case 1: gMan.navR.sprite = gMan.nav[0]; break;
+                    case 2: gMan.radR.sprite = gMan.rad[0]; break;
+                    case 3: gMan.gunR.sprite = gMan.gun[0]; break;
+                    case 4: gMan.engR.sprite = gMan.eng[0]; break;
+                }
+                damage -= 2f;
+                viewMode = 1;
             }
         }
     }
@@ -113,10 +137,13 @@ public class GMan : MonoBehaviour
 
     public static void showMini(string name)
     {
-        gMan.miniGames[rGames[0]].SetActive(true);
+        gMan.curGame = gMan.miniGames[rGames[0]];
+        gMan.curGame.SetActive(true);
         rGames.Remove(0);
         curMiniWin = false;
         gMan.fixWhat = name;
+        gMan.miniShow.SetActive(true);
+        viewMode = 2;
     }
     private void Awake()
     {
@@ -147,6 +174,9 @@ public class GMan : MonoBehaviour
                 alpha = (Time.realtimeSinceStartup - timeOxy) / 20f;
             }
             oxy.color = new Color(oxy.color.r, oxy.color.g, oxy.color.b, alpha);
+        } else
+        {
+            oxy.color = new Color(0, 0, 0, 0);
         }
         if (Input.GetKeyUp(KeyCode.E) && ! isChange)
         {

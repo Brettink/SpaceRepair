@@ -20,18 +20,6 @@ public class Controller : MonoBehaviour
         GMan.charBod = bodyChar;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        print(collision.collider.gameObject.name);
-        if (collision.collider.gameObject.tag.Equals("Fix"))
-        {
-            print("Got here");
-            if (!GMan.shipStatus[collision.collider.gameObject.name])
-            {
-                GMan.showMini(collision.collider.gameObject.name);
-            }
-        }
-    }
 
     // Update is called once per frame
     void Update()

@@ -15,6 +15,7 @@ public class MG3 : MonoBehaviour
     int selectedInt = 0;
     public LineRenderer[] rends;
     public Transform[] rendT;
+    int correct = 0;
     void Awake()
     {
         panel.SetActive(true);
@@ -25,6 +26,7 @@ public class MG3 : MonoBehaviour
             int ranI = Random.Range(0, aps.Count);
             cons[i] = aps.ToArray()[ranI];
             aps.RemoveAt(ranI);
+            panel.SetActive(true);
         }
 
         lineup.text = "";
@@ -60,6 +62,12 @@ public class MG3 : MonoBehaviour
                 g.z = -50;
                 rends[chartoInt].SetPosition(1, g);
                 rends[chartoInt].enabled = true;
+                correct += 1;
+                if (correct > 3)
+                {
+                    panel.SetActive(false);
+                    GMan.curMiniWin = true;
+                }
             } else
             {
                 print("Try again");
