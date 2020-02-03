@@ -48,6 +48,13 @@ public class GMan : MonoBehaviour
                 rGames.Add(Random.Range(0, 3));
                 int fix = Random.Range(0, 5);
             string name = "";
+            if (fix == 0 && shipStatus["O2"])
+            {
+                gMan.timeOxy = Time.realtimeSinceStartup;
+            } else
+            {
+                gMan.timeOxy = 0;
+            }
             switch (fix)
             {
                 case 0: gMan.o2R.sprite = gMan.o2[1]; name = "O2"; break;
@@ -56,15 +63,11 @@ public class GMan : MonoBehaviour
                 case 3: gMan.gunR.sprite = gMan.gun[1]; name = "weap"; break;
                 case 4: gMan.engR.sprite = gMan.eng[1]; name = "engine"; break;
             }
-            if (fix == 0 && shipStatus["O2"])
-            {
-                gMan.timeOxy = Time.realtimeSinceStartup;
-            }
             shipStatus[name] = false;
         }
     }
     public GameObject curGame;
-    public static float difficulty = 1.35f;
+    public static float difficulty = 1.25f;
     public const float VOOMIN = .35f;
     public int halfW = 50;
     public int backDist = 50;
@@ -161,9 +164,10 @@ public class GMan : MonoBehaviour
         if (!shipStatus["O2"])
         {
             float alpha = oxy.color.a;
-            print(oxy.color);
             if (Time.realtimeSinceStartup - timeOxy > 20f)
             {
+                shipStatus["O2"] = true;
+                timeOxy = 0f;
                 Application.Quit();
             } else
             {
